@@ -35,7 +35,7 @@ def to_feedgen(feed: feedparser.util.FeedParserDict) -> FeedGenerator:
         fe.title(entry.get("title"))
         fe.link(href=entry.get("link"))
         fe.description(entry.get("summary"))
-        fe.author(entry.get("author"))
+        fe.author({"name": entry.get("author")})
         fe.comments(entry.get("comments"))
         if entry.get("enclosures"):
             for enclosure in entry.get("enclosures"):
