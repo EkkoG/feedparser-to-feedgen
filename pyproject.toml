@@ -6,7 +6,7 @@ authors = ["EkkoG <beijiu572@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.10"
 feedgen = "^1.0.0"
 feedparser = "^6.0.11"
 
