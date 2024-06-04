@@ -17,6 +17,7 @@ def to_feedgen(feed: feedparser.util.FeedParserDict) -> FeedGenerator:
     fg.generator(feed.get("feed").get("generator"))
     fg.docs(feed.get("feed").get("docs"))
     fg.ttl(feed.get("feed").get("ttl"))
+    fg.id(feed.get("feed").get("id"))
     if feed.get("feed").get("image"):
         fg.image(
             url=feed.get("feed").get("image").get("url"),
