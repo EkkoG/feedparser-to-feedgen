@@ -32,7 +32,7 @@ def to_feedgen(feed: feedparser.util.FeedParserDict) -> FeedGenerator:
             fg.category(category.get("term"), domain=category.get("scheme"))
 
     for entry in feed.get("entries"):
-        fe = fg.add_entry()
+        fe = fg.add_entry(order="append")
         fe.title(entry.get("title"))
         fe.link(href=entry.get("link"))
         fe.description(entry.get("summary"))
